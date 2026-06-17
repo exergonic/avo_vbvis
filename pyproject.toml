@@ -1,0 +1,41 @@
+[project]
+name = "avogadro-vbvis"
+version = "0.1.0"
+description = "Avogadro 2 Pixi plugin for visualizing valence bond orbitals."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "numpy>=2.4.6,<3",
+    "scipy>=1.17.1,<2",
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.scripts]
+avogadro-vbvis = "avo_vbvis:main"
+
+[build-system]
+requires = ["uv_build>=0.10.2,<0.11.0"]
+build-backend = "uv_build"
+
+[tool.avogadro]
+minimum-avogadro-version = "1.103"
+
+[[tool.avogadro.menu-commands]]
+identifier = "display-valence-orbitals"
+input-format = "xyz"
+input-cjson = true
+menu = "Plugins"
+submenu = "Valence Bond Orbitals"
+item = "Display Valence Orbitals"
+menu-priorities = [100, 800]
+
+[tool.pixi.workspace]
+channels = ["conda-forge"]
+platforms = ["win-64"]
+
+[tool.pixi.pypi-dependencies]
+avogadro-vbvis = { path = ".", editable = true }
