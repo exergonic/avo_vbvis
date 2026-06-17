@@ -2,6 +2,7 @@
 # Avogadro VB Orbital Visualization Plugin
 
 == WORK IN PROGRESS ==
+
 This project is in its beginning stages. Nothing works and you shouldn't even be looking at it. :)
 
 This repository contains the initial scaffold for an Avogadro 2 Pixi plugin that will visualize valence bond orbitals.
