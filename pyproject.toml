@@ -15,7 +15,7 @@ classifiers = [
 ]
 
 [project.scripts]
-avogadro-vbvis = "avo_vbvis:main"
+avogadro-vbvis = "avogadro_vbvis:main"
 
 [build-system]
 requires = ["uv_build>=0.10.2,<0.11.0"]
@@ -28,7 +28,7 @@ minimum-avogadro-version = "1.103"
 identifier = "display-valence-orbitals"
 input-format = "xyz"
 input-cjson = true
-menu = "Plugins"
+menu = "Extensions"
 submenu = "Valence Bond Orbitals"
 item = "Display Valence Orbitals"
 menu-priorities = [100, 800]
