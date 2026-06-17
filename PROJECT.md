@@ -1,20 +1,21 @@
 # Avogadro Plugin: Visualize Valence Bond Orbitals of Molecules
 
 ## Overall Goals and Initial Planning
- - develop a plugin for Avogadro 2 according to the requirements on https://avogadro.cc/develop/plugins/index.html
- - it will be a `Pixi project` style plugin
-    - therefore I will use `pixi` to handle the Python development environment
- - the plugin will create a new menu command in the PLUGINS menu. Therefore it is a "Menu Commands" Feature Type plugin. 
- - plugin should be easily installable in Avogadro 2 through the plugins widget
- - I have local plugins after which I can pattern my project locally on my hard drive at `C:\Users\mccan\AppData\Local\OpenChemistry\Avogadro\plugins\`
+
+- develop a plugin for Avogadro 2 according to the requirements on <https://avogadro.cc/develop/plugins/index.html>
+- it will be a `Pixi project` style plugin
+  - therefore I will use `pixi` to handle the Python development environment
+- the plugin will create a new menu command in the PLUGINS menu. Therefore it is a "Menu Commands" Feature Type plugin.
+- plugin should be easily installable in Avogadro 2 through the plugins widget
+- I have local plugins after which I can pattern my project locally on my hard drive at `C:\Users\mccan\AppData\Local\OpenChemistry\Avogadro\plugins\`
 
 ## Capabilities: What the Plugin Should Do
 
- - the plugin will enable the user to use a MENU COMMAND within Avogadro to display the valence atomic orbitals of the molecule that is 
-   currently drawn on the Avogadro screen. 
- - When the user clicks "Display Valence Orbitals", new surfaces will appear over the molecule. These surfaces will be the atomic orbitals of each atom.
- - Because this plugin is geared as an educational tool, the orbitals that are displayed will be those that are taught at the undergraduate
-   general chemistry and undergraduate organic chemistry level. They will not be rigorously calculated by quantum mechanics. Rather, they will be based upon 
+- the plugin will enable the user to use a MENU COMMAND within Avogadro to display the valence atomic orbitals of the molecule that is
+   currently drawn on the Avogadro screen.
+- When the user clicks "Display Valence Orbitals", new surfaces will appear over the molecule. These surfaces will be the atomic orbitals of each atom.
+- Because this plugin is geared as an educational tool, the orbitals that are displayed will be those that are taught at the undergraduate
+   general chemistry and undergraduate organic chemistry level. They will not be rigorously calculated by quantum mechanics. Rather, they will be based upon
    the geometry of the molecule and will be produced entirely algorithmically according to VSEPR rules.
 
 ## How Will the Plugin Do this, Generally
@@ -23,7 +24,7 @@ Here is a conceptual roadmap of how your algorithm can translate a 3D molecular 
 
 To generate the orbitals programmatically, the Python script will need to pass the molecule through a four-step pipeline every time the structure is loaded or updated.
 
-```
+```qml
 [Molecule Geometry] ➔ [Step 1: Steric Number] ➔ [Step 2: Hybridization] ➔ [Step 3: Vector Orientation] ➔ [Step 4: Grid Generation]
 ```
 
