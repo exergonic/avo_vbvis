@@ -34,17 +34,6 @@ This plugin aims to:
 
 ---
 
-> ### 🎯 Scope & Intent
->
-> This plugin is designed for **educational and qualitative visualization** using VSEPR rules and geometric algorithms to render textbook-style hybrid ($sp$, $sp^2$, $sp^3$) and unhybridized ($p$) orbitals.
->
-> | What It Is                                                   | What It Is NOT                                               |
-> | :----------------------------------------------------------- | :----------------------------------------------------------- |
-> | 📐 **Geometric & Algorithmic:** Infers orbital orientations from local coordination numbers and atomic positions. | 🧮 **Quantum Mechanical:** Does *not* perform ab initio Valence Bond (VB) wavefunction or resonance calculations. |
-> | 📚 **Pedagogical:** Ideal for illustrating undergraduate general/organic chemistry bonding concepts. | 🔬 **Electronic Structure Tool:** Does *not* compute molecular orbitals (MOs) or electron density matrices. |
-
----
-
 ## 🛠️ Architecture & Tech Stack
 
 The plugin leverages a modern, ultra-fast Python stack isolated entirely from global system variables:
