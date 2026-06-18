@@ -56,7 +56,7 @@ Ensure you have [Pixi installed](https://pixi.sh/latest/#installation) on your m
 1. Clone the repository into your local Avogadro 2 plugins directory:
 
    ```bash
-   git clone [https://github.com/exergonic/avo_vbvis.git](https://github.com/exergonic/avo_vbvis.git)
+   git clone https://github.com/exergonic/avo_vbvis.git
    cd avo_vbvis
    ```
 
